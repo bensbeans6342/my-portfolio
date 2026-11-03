@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/config.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1 class="hero-name" id="hero-name"></h1>
+        <p class="hero-headline" id="hero-headline"></p>
+        <p class="hero-bio reading" id="hero-bio"></p>
+        <div class="hero-actions">
+          <a class="btn" href="/contact/">See my resume</a>
+          <a class="btn btn-quiet" href="/contact/#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="section" aria-labelledby="ach-title">
+        <div class="section-head">
+          <div>
+            <h2 id="ach-title">Achievements</h2>
+            <p id="ach-note" hidden>Highlighted entries are the ones I'm proudest of.</p>
+          </div>
+          <div class="filters" id="ach-filters" role="group" aria-label="Filter achievements by category"></div>
+        </div>
+        <div id="ach-list"><p class="notice">Loading achievements…</p></div>
+      </section>
+
+      <div class="split section">
+        <section aria-labelledby="posts-title">
+          <div class="section-head"><h2 id="posts-title">Recent posts</h2></div>
+          <ul class="plain-list" id="recent-posts"><li class="notice">Loading…</li></ul>
+          <a class="more-link" href="/blog/">All posts</a>
+        </section>
+        <section aria-labelledby="events-title">
+          <div class="section-head"><h2 id="events-title">Coming up</h2></div>
+          <ul class="plain-list" id="upcoming"><li class="notice">Loading…</li></ul>
+          <a class="more-link" href="/calendar/">Full calendar</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/home.js"></script>
+</body>
+</html>

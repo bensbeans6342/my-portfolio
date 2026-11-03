@@ -1,0 +1,43 @@
+{
+  // ── Basic settings ─────────────────────────────────────────────
+  // "name" must match the Worker name you type in the Cloudflare dashboard.
+  "name": "my-portfolio",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+
+  // ── Your pages ─────────────────────────────────────────────────
+  // Everything in /public is served as your website. The Worker runs first
+  // for /api and /admin so it can check the Cloudflare Access sign-in
+  // before anything admin-related is sent to the browser.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*", "/admin", "/admin/*"]
+  },
+
+  // ── Database (setup guide, Part 2) ─────────────────────────────
+  // Paste the Database ID from Cloudflare: Storage & databases > D1.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "portfolio-db",
+      "database_id": "PASTE-YOUR-DATABASE-ID-HERE"
+    }
+  ],
+
+  // ── Cloudflare Access for /admin (setup guide, Part 4) ─────────
+  // Fill these in after you create the Access application.
+  // Neither one is a password: they only identify your Access setup,
+  // so it's fine for them to be visible on GitHub.
+  "vars": {
+    "ACCESS_TEAM_DOMAIN": "",
+    "ACCESS_AUD": ""
+  },
+
+  // Turns off extra preview addresses for each version, so your site has
+  // one public address to protect.
+  "preview_urls": false,
+
+  "observability": { "enabled": true }
+}

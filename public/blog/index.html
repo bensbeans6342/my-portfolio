@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/config.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="wrap">
+    <section id="list-view">
+      <div class="page-head">
+        <h1>Blog</h1>
+        <p>Notes on classes, projects, competitions and what I'm learning along the way.</p>
+      </div>
+      <ul class="post-list" id="post-list"><li class="notice">Loading posts…</li></ul>
+    </section>
+
+    <article class="article" id="post-view" hidden>
+      <a class="back" href="/blog/">All posts</a>
+      <h1 id="post-title"></h1>
+      <p class="dateline" id="post-date"></p>
+      <div class="prose" id="post-body"></div>
+    </article>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/markdown.js"></script>
+  <script src="/assets/blog.js"></script>
+</body>
+</html>

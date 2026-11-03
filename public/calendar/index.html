@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/config.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1>Calendar</h1>
+      <p id="cal-intro"></p>
+    </div>
+
+    <div class="cal-layout">
+      <section aria-labelledby="month-title">
+        <div class="cal-toolbar">
+          <h2 id="month-title" aria-live="polite"></h2>
+          <div class="controls">
+            <button class="btn btn-quiet btn-small" type="button" id="prev">Previous<span class="visually-hidden"> month</span></button>
+            <button class="btn btn-quiet btn-small" type="button" id="today">Today</button>
+            <button class="btn btn-quiet btn-small" type="button" id="next">Next<span class="visually-hidden"> month</span></button>
+          </div>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <p class="notice" id="cal-status" hidden></p>
+      </section>
+
+      <div>
+        <section class="cal-side" aria-labelledby="day-title">
+          <h3 id="day-title"></h3>
+          <div id="day-events"></div>
+        </section>
+        <section class="cal-side" aria-labelledby="upcoming-title">
+          <h3 id="upcoming-title">Upcoming</h3>
+          <div id="upcoming-events"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Site admin</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/admin.css">
+</head>
+<body>
+  <header class="admin-bar">
+    <div class="wrap">
+      <span class="admin-title">Site admin</span>
+      <div class="admin-account">
+        <span class="muted" id="whoami"></span>
+        <a href="/" target="_blank" rel="noopener">View site</a>
+        <a href="/admin/logout">Sign out</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="banner" id="banner" role="alert" hidden></div>
+
+    <div class="tabs" role="tablist" aria-label="What to manage">
+      <button class="tab" role="tab" id="tab-achievements" data-tab="achievements" aria-controls="panel">Achievements</button>
+      <button class="tab" role="tab" id="tab-posts" data-tab="posts" aria-controls="panel">Blog posts</button>
+      <button class="tab" role="tab" id="tab-events" data-tab="events" aria-controls="panel">Calendar</button>
+      <button class="tab" role="tab" id="tab-messages" data-tab="messages" aria-controls="panel">Messages <span class="badge" id="unread" hidden></span></button>
+      <button class="tab" role="tab" id="tab-signin" data-tab="signin" aria-controls="panel" hidden>Sign-in</button>
+    </div>
+
+    <div class="notice-bar" id="notice" hidden></div>
+
+    <div class="workspace" id="panel" role="tabpanel">
+      <section class="list-pane" aria-label="Items">
+        <div class="list-head">
+          <h2 id="list-title"></h2>
+          <button class="btn btn-small" type="button" id="new-btn"></button>
+        </div>
+        <ul class="item-list" id="item-list"></ul>
+      </section>
+      <section class="editor" id="editor" aria-live="polite"></section>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="/assets/markdown.js"></script>
+  <script src="/assets/qr.js"></script>
+  <script src="/assets/admin.js"></script>
+</body>
+</html>

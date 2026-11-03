@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume &amp; contact</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/config.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1>Resume &amp; contact</h1>
+      <p>The short version of my resume is below. The PDF has everything.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div>
+        <section class="resume-block" aria-labelledby="edu-title">
+          <h2 id="edu-title">Education</h2>
+          <div id="education"></div>
+        </section>
+        <section class="resume-block" aria-labelledby="exp-title">
+          <h2 id="exp-title">Experience</h2>
+          <div id="experience"></div>
+        </section>
+        <section class="resume-block" aria-labelledby="skills-title">
+          <h2 id="skills-title">Skills</h2>
+          <ul class="skill-list" id="skills"></ul>
+        </section>
+        <p style="margin-top: 32px">
+          <a class="btn" id="resume-link" href="/resume.pdf" download>Download resume (PDF)</a>
+        </p>
+      </div>
+
+      <aside class="contact-card" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Get in touch</h2>
+        <ul class="contact-lines" id="contact-lines"></ul>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="c-name">Your name</label>
+            <input type="text" id="c-name" name="name" autocomplete="name" maxlength="100" required>
+          </div>
+          <div class="field">
+            <label for="c-email">Your email</label>
+            <input type="email" id="c-email" name="email" autocomplete="email" maxlength="200" required>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="6" maxlength="5000" required></textarea>
+          </div>
+          <div class="honeypot" aria-hidden="true">
+            <label for="c-website">Leave this empty</label>
+            <input type="text" id="c-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/contact.js"></script>
+</body>
+</html>
